@@ -1,0 +1,16 @@
+{
+    "name": "jeanm/php-bibliotheque",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mat25",
+            "email": "mateojean25660@gmail.com"
+        }
+    ],
+    "require": {}
+}

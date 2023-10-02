@@ -1,0 +1,51 @@
+@startuml
+
+class Adherent {
+- numeroAdherent : string
+- prenom : string
+- nom : string
+- email : string
+- dateAdhesion : DateTime
++ genererNumero()
++ renouvelerAdhesion()
++ getInformationsAdherent()
++ adhesionValable()
+}
+class Emprunt {
+- dateEmprunt : DateTime
+- dateRetourEstime : DateTime
+- dateRetour : DateTime
++ getInformationsEmprunt()
++ empruntEnCours()
++ empruntEnAlerte()
++ dateRetourDepasser()
+}
+
+class Media {
+# titre :string
++ getInformationsMedia()
+}
+
+class Livre {
+# Isbn : string
+# auteur : string
+# nbrPage : int
+}
+class bluRay {
+# realisateur : string
+# duree : float
+# anneeSortie : DateTime
+}
+class Magazine {
+# numeroMagazine : int
+# datePublication : DateTime
+}
+Adherent"1..1" - "0..*"Emprunt : "Réalise"
+Emprunt --> "1..1"Media : Correspond
+Livre --|> Media
+bluRay --|> Media
+Magazine --|> Media
+
+
+
+@enduml
