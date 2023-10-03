@@ -21,8 +21,9 @@ class Emprunt {
 + dateRetourDepasser()
 }
 
-class Media {
+abstract class Media {
 # titre :string
+# dureeEmprunt : int
 + getInformationsMedia()
 }
 
@@ -30,15 +31,18 @@ class Livre {
 # Isbn : string
 # auteur : string
 # nbrPage : int
++ getInformationsMedia()
 }
 class bluRay {
 # realisateur : string
 # duree : float
-# anneeSortie : DateTime
+# anneeSortie : String
++ getInformationsMedia()
 }
 class Magazine {
 # numeroMagazine : int
 # datePublication : DateTime
++ getInformationsMedia()
 }
 Adherent"1..1" <-- "0..*"Emprunt :< Est Réaliser
 Emprunt --> "1..1"Media :> Correspond
