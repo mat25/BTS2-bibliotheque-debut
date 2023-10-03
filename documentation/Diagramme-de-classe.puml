@@ -6,7 +6,7 @@ class Adherent {
 - nom : string
 - email : string
 - dateAdhesion : DateTime
-+ genererNumero()
+- genererNumero()
 + renouvelerAdhesion()
 + getInformationsAdherent()
 + adhesionValable()
@@ -40,8 +40,8 @@ class Magazine {
 # numeroMagazine : int
 # datePublication : DateTime
 }
-Adherent"1..1" - "0..*"Emprunt : "Réalise"
-Emprunt --> "1..1"Media : Correspond
+Adherent"1..1" <-- "0..*"Emprunt :< Est Réaliser
+Emprunt --> "1..1"Media :> Correspond
 Livre --|> Media
 bluRay --|> Media
 Magazine --|> Media
