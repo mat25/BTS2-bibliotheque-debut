@@ -23,7 +23,7 @@ class Adherent
     }
 
     private function genererNumero() :string {
-        return "AD-".random_int(000000,999999);
+        return "AD-".random_int(100000,999999);
     }
 
     public function renouvelerAdhesion() : void {
